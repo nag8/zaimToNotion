@@ -1,0 +1,25 @@
+{
+  "timeZone": "Asia/Tokyo",
+  "exceptionLogging": "STACKDRIVER",
+  "runtimeVersion": "V8",
+  "dependencies": {
+    "libraries": [
+      {
+        "userSymbol": "OAuth1",
+        "libraryId": "1CXDCY5sqT9ph64fFwSzVtXnbjpSfWdRymafDrtIZ7Z_hwysTY7IIhi7s",
+        "version": "18"
+      },
+      {
+        "userSymbol": "Notion",
+        "libraryId": "1P5ARr7gp69EnBgiNMVEVboO-M-XESgTSycWU2WWBuIvdxtFsYk4MlyG0",
+        "version": "0",
+        "developmentMode": true
+      },
+      {
+        "userSymbol": "dayjs",
+        "version": "1",
+        "libraryId": "1ShsRhHc8tgPy5wGOzUvgEhOedJUQD53m-gd8lG2MOgs-dXC_aCZn9lFB"
+      }
+    ]
+  }
+}
