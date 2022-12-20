@@ -45,6 +45,17 @@ class ZaimManager{
     );
     return JSON.parse(response.getContentText()).money;
   }
+
+  getAccountList(){
+    const option = {
+      method: 'get',
+    };
+    const response = this.service.fetch(
+      `https://api.zaim.net/v2/home/account`,
+      option
+    );
+    return JSON.parse(response.getContentText()).accounts;
+  }
 }
 
 
