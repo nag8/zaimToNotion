@@ -28,7 +28,7 @@ class ZaimManager{
   authorize(){
     if(this.service.hasAccess()) return;
     const authorizationUrl = this.service.authorize();
-    Logger.log(`次のURLを開いてZaimで認証したあと、再度スクリプトを実行してください。: ${authorizationUrl}`);
+    Browser.msgBox(`このurlにアクセス\n${authorizationUrl}`);
   }
 
   reset(){
@@ -62,8 +62,8 @@ class ZaimManager{
 function authCallback(request) {
     
   return HtmlService.createHtmlOutput(
-    getService().handleCallback(request)
-      ? '認証できました！このページを閉じて再びスクリプトを実行してください。'
+    new ZaimManager().service.handleCallback(request)
+      ? '認証に成功'
       : '認証に失敗'
   );
 }

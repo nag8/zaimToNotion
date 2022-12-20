@@ -15,3 +15,7 @@ function init(){
   const zaimManager = new ZaimManager();
   zaimManager.authorize();
 }
+
+function setTrigger(){
+  ScriptApp.newTrigger('trigger').timeBased().everyDays(1).atHour(1).create();
+}
